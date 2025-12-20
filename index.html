@@ -169,6 +169,50 @@
             overflow: hidden;
         }
 
+        /* Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
         /* Section Headers */
         .section-header {
             text-align: center;
@@ -499,6 +543,17 @@
                 left: -30px;
             }
 
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
             /* ✅ Responsive fix for typing animation */
             #typing-text {
                 white-space: normal;
@@ -535,19 +590,21 @@
             </div>
             <h1>Praveen B</h1>
             
-            <!-- ✅ UPDATED: Typing animation element -->
+            <!-- ✅ Typing animation element -->
             <div class="title">
                 <span id="typing-text"></span>
             </div>
             
-            <p class="about-text" style="max-width: 600px; margin: 0 auto 2rem;">
+            <p class="about-text" style="max-width: 600px; margin: 0 auto;">
                 Building scalable, resilient infrastructure and automating everything in between
             </p>
+            
+            <!-- ✅ Correct resume filename and styled buttons -->
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">
                     <i class="fas fa-paper-plane"></i>Get In Touch
                 </a>
-                <a href="resume.pdf" class="btn btn-secondary" download>
+                <a href="Praveen B_Resume.pdf" class="btn btn-secondary" download>
                     <i class="fas fa-download"></i>Download Resume
                 </a>
             </div>
@@ -769,7 +826,7 @@
     </footer>
 
     <script>
-        // ✅ UPDATED: Typing animation
+        // ✅ Typing animation
         const roles = [
             "DevOps Engineer",
             "CI/CD Engineer",
